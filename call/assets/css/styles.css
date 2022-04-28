@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+
+body {
+  background-color: #E7530B;
+  color: white;
+  margin: 20px;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-left: -3px;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 5px;
+  margin-left: -41px;
+  margin-top: 5px;
+}
+
+li a {
+  color: white;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  font-weight: 600;
+  overflow-wrap: normal;
+  margin-bottom: 50px;
+  margin-top: -20px;
+}
+
+.quick-intro p {
+  font-size: 2.8rem;
+}
+
+footer {
+  margin-top: -20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: -5px;
+}
+
+footer {
+  color: white;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.footer-nav  {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin-left: -38px;
+}
+
+footer a {
+  color: white;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+
+  body {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+      "header header nav nav"
+      "header header nav nav" 
+      "header header nav nav"
+      ". . . ."
+      "section section section section"
+      "section section section section"
+      "section section section section"
+      "footer footer footer footer"
+      "footer footer footer footer"
+      "footer footer footer footer";
+    grid-template-columns: 4fr;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  .main-nav {
+    grid-area: nav;
+  }
+
+  section {
+    grid-area: section;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .quick-intro {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto;
+    grid-column: 2 / 9;
+    grid-row: 2 / 9;
+    margin-bottom: 30px;
+    margin-left: 30px;
+
+  }
+
+  .quick-intro p {
+    font-size: 3.2rem;
+    grid-column: 2 / 9;
+    grid-row: 2 / 9;
+    margin-bottom: 30px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .main-nav {
+    margin-top: 20px;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+
+  .quick-intro {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto;
+    grid-column: 2 / 9;
+    grid-row: 2 / 9;
+    margin-left: 30px;
+  }
+
+  .quick-intro p { 
+    font-size: 3.5rem;
+    grid-column: 2 / 9;
+    grid-row: 2 / 9;
+    padding-bottom: 20px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer h2 {
+    font-size: 1.2rem;
+  }
+
+  footer a {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .quick-intro p {
+    font-size: 4.7rem;
+  }
+
+}
